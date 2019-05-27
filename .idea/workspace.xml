@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be088632-a45f-4ead-a4df-2e1e96b12809" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/client.html" beforeDir="false" afterPath="$PROJECT_DIR$/client.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eco.html" beforeDir="false" afterPath="$PROJECT_DIR$/eco.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,24 +16,15 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1120">
-                  <caret line="119" column="26" lean-forward="true" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
+                <state relative-caret-position="1009">
+                  <caret line="112" column="22" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
                   <folding>
                     <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/eco.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="785">
-                  <caret line="419" column="13" lean-forward="true" selection-start-line="381" selection-start-column="4" selection-end-line="419" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -46,8 +36,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="211">
-                  <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+                <state relative-caret-position="387">
+                  <caret line="112" column="22" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
                   <folding>
                     <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
                   </folding>
@@ -111,10 +101,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -139,23 +131,20 @@
       <option name="presentableId" value="Default" />
       <updated>1558678034113</updated>
       <workItem from="1558678035187" duration="4707000" />
+      <workItem from="1558992057733" duration="1410000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4707000" />
+    <option name="totallyTimeSpent" value="6117000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969843" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -163,6 +152,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -174,15 +167,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/eco.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="785">
-          <caret line="419" column="13" lean-forward="true" selection-start-line="381" selection-start-column="4" selection-end-line="419" selection-end-column="13" />
+        <state relative-caret-position="17">
+          <caret line="377" column="16" lean-forward="true" selection-start-line="377" selection-start-column="16" selection-end-line="377" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+        <state relative-caret-position="1009">
+          <caret line="112" column="22" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
           <folding>
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
           </folding>
