@@ -1,4 +1,4 @@
-*  {
+* {
     box-sizing: border-box;
 }
 
@@ -23,13 +23,13 @@ ul {
     padding: 0 15px;
 }
 
-header .login{
+header .login {
     font-size: 13px;
     line-height: 10px;
     color: #0069b4;
 }
 
-header .menu a{
+header .menu a {
     font-size: 20px;
     line-height: 28px;
     color: #333333;
@@ -199,4 +199,23 @@ footer a {
 
 footer a.soc {
     font-size: 21px;
+}
+
+/*Корпоративным клиентам*/
+.titleOrder span,a {
+    font-size: 13px;
+    color: 333333;
+    text-decoration: none;
+}
+
+.clientForm label {
+    font-size: 13px;
+    font-style: italic;
+    color: #aaaaaa;
+}
+
+.clientForm .logoIn span:last-child {
+    font-size: 11px;
+    color: #999999;
+
 }
