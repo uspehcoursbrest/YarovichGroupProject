@@ -250,5 +250,50 @@ clear::after {
 .clientForm .logoIn span:last-child {
     font-size: 11px;
     color: #999999;
+}
+
+.clientForm .btnY label, .btnN label{
+    font-size: 13px;
+    line-height: 22px;
+    color:#666666 ;
+    font-style: normal;
+}
+
+.btnOrange input{
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+    background-color: #ff7200;
 
 }
+
+.discriptionClient span {
+    font-size: 25px;
+    line-height: 22px;
+    color:#333333;
+    font-weight: 600;
+}
+
+.discriptionClient p {
+    font-size: 13px;
+    line-height: 22px;
+    color:#333333 ;
+    font-weight: 400;
+}
+.btnGreen input {
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+    background-color: #64ba4a;
+
+}
+
+.form .clientForm:nth-child(5) span {
+    font-size: 11px;
+    color: #999999;
+}
+
+
+
+
+
