@@ -68,7 +68,7 @@ header .basket {
 }
 
 header .basket span {
-    color: #1a9547;
+    color: #333333;
 }
 
 header [class*="icon"] {
@@ -103,14 +103,11 @@ header .logo img {
     width: calc(100% - 320px);
     float: left;
 }
-
 .clear::after{
     content: "";
     display: block;
     clear: both;
 }
-
-/**/
 .advantages .item p {
     font-size: 12px;
     line-height: 14px;
@@ -136,10 +133,6 @@ header .logo img {
     line-height: 37px;
     text-align: center;
     color: #ffffff;
-}
-.subscribe span {
-    font-size: 12px;
-    color: rgba(255,255,255,0.5);
 }
 
 .catalogMenu li {
@@ -216,7 +209,6 @@ footer {
     font-size: 13px;
     line-height: 22px;
     color: #ffffff;
-    background-color: #64ba4a;
 }
 
 footer a {
@@ -228,11 +220,29 @@ footer a.soc {
     font-size: 21px;
 }
 
-clear::after {
-    content: "";
-    display: block;
-    clear: both;
+footer {
+    background-color: #64ba4a;
 }
+/*назначить дивам классы в подвале*/
+footer > div > div > ul {
+    width: 50%;
+    float: left;
+}
+footer > div > div > div {
+    width: 25%;
+    float: left;
+}
+
+.cards .photo {
+    width: 220px;
+    height: 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
 
 /*Корпоративным клиентам*/
 .titleOrder span,a {
