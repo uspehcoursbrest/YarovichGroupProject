@@ -13,36 +13,38 @@
 <!--Хэдэр-->
 <header>
     <div class="container">
-        <div class="left">
-            <a href="#" class="login">
-                <span class="icon-man"></span>
-                <span>Войти в личный каёбинет</span>
-            </a>
-            <ul class="menu">
-                <li><a href="#">Оптовикам</a></li>
-                <li><a href="#">Корпоративным клиентам</a></li>
-                <li><a href="#">Доставка и оплата</a></li>
-                <li><a href="#">О мастерской</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </div>
-        <div class="logo">
-            <a href="#">
-                <img src="img/png/logo.png"/>
-            </a>
-        </div>
-        <div class="right">
-            <a href="#" class="tel">
-                <span class="icon-phone"></span>
-                <span>8 (495) 648-8-456</span>
-            </a>
-            <a href="#" class="noCall">Не дозвонились?</a>
-            <p class="time">Мы работаем пн-пт
-                10:00 - 19:00</p>
-            <a class="basket" href="#" style="background-image: url(img/png/basket.png);">
-                <span>товаров </span>5
-                <span> на сумму </span>2550 ₽
-            </a>
+        <div class="topLine">
+            <div class="left">
+                <a href="#" class="login">
+                    <span class="icon-man"></span>
+                    <span>Войти в личный каёбинет</span>
+                </a>
+                <ul class="menu">
+                    <li><a href="#">Оптовикам</a></li>
+                    <li><a href="#">Корпоративным клиентам</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">О мастерской</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <a href="#">
+                    <img src="img/png/logo.png"/>
+                </a>
+            </div>
+            <div class="right">
+                <a href="#" class="tel">
+                    <span class="icon-phone"></span>
+                    <span>8 (495) 648-8-456</span>
+                </a>
+                <a href="#" class="noCall">Не дозвонились?</a>
+                <p class="time">Мы работаем пн-пт
+                    10:00 - 19:00</p>
+                <a class="basket" href="#" style="background-image: url(img/png/basket.png);">
+                    <span>товаров </span>5
+                    <span> на сумму </span>2550 ₽
+                </a>
+            </div>
         </div>
     </div>
 </header>
@@ -51,8 +53,8 @@
     <div class="content">
         <!--Баннер-->
         <div class="banner">
-            <div class="left"></div>
-            <div class="right"></div>
+            <div class="left" style="background-image: url(img/jpg/baner1.jpg)"></div>
+            <div class="right" style="background-image: url(img/jpg/baner2.jpg)"></div>
         </div>
         <!--Преимущества и подписка-->
         <div class="advSub clear">
@@ -82,7 +84,7 @@
                 <form action="#">
                     <label for="sub">Узнавайте о новинках первыми!</label>
                     <input type="email" name="email" id="sub" placeholder="Введите ваш e-mail" required>
-                    <div>
+                    <div class="wrap">
                         <button class="btn  btnGreen">Подписаться на рассылку</button>
                         <span>Обещаем НЕ спамить</span>
                     </div>
@@ -110,7 +112,7 @@
             </div>
             <div class="cards">
                 <!--1-->
-                <div class="card" >
+                <div class="card">
                     <div class="photo" style="background-image: url(img/jpg/card1.jpg)">
                     </div>
                     <div>
@@ -135,6 +137,7 @@
                             <button class="btn btnOrang">В корзину</button>
                         </div>
                     </div>
+                    <span class="status discount">-10%</span>
                 </div>
                 <!--3-->
                 <div class="card">
@@ -148,6 +151,7 @@
                             <button class="btn btnOrang">В корзину</button>
                         </div>
                     </div>
+                    <span class="status hit">Хит</span>
                 </div>
                 <!--4-->
                 <div class="card">
