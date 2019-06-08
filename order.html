@@ -62,22 +62,30 @@
         </div>
         <div class="delivery">
             <span class="subtitle titleText">Способ доставки</span>
-            <div class="deskription selectio">
+            <ul class="orderList">
                 <!--            сделать radio-->
-                <input type="radio" name="get" id="1">
-                <span>Доставка курьерской службой по Москве и МО (IM Logistics)   0 р.</span>
-                <span>Заказ оформленный: - до 16:00 будет доставлен на следующий рабочий день; - после 16:00 будет доставлен через один рабочий день;</span>
-                <input type="radio" name="get" id="2">
-                <span>Экспресс-доставка   450 р.</span>
-                <span>День в день, в течение 4-х часов (пн-пт с 10 до 19 часов). В пределах МКАД. Доставка осуществляется только по предоплате. Услуга "товары на выбор" при данном типе доставки недоступна.</span>
-                <input type="radio" name="get" id="3">
-                <span>Доставить в подарок 450 р.</span>
-                <span>День в день, в течение 4-х часов (пн-пт с 10-19 часов). В пределах МКАД. Доставка осуществляется только по предоплате.</span>
+                <li>
+                    <input type="radio" name="deliveryMethod" value="courier" id="deliveryCourier" class="radioBtn" checked>
+                <label for="deliveryCourier">Доставка курьерской службой по Москве и МО (IM Logistics)   0 р.</label>
+                <p>Заказ оформленный: - до 16:00 будет доставлен на следующий рабочий день; - после 16:00 будет доставлен через один рабочий день;</p>
+                </li>
+                <li>
+                    <input type="radio" name="deliveryMethod" value="express" id="deliveryExpress" class="radioBtn">
+                <label for="deliveryExpress">Экспресс-доставка   450 р.</label>
+                <p>День в день, в течение 4-х часов (пн-пт с 10 до 19 часов). В пределах МКАД. Доставка осуществляется только по предоплате. Услуга "товары на выбор" при данном типе доставки недоступна.</p>
+                </li>
+                    <li>
+                        <input type="radio" name="deliveryMethod" value="gift" id="deliveryGift" class="radioBtn">
+                <label for="deliveryGift">Доставить в подарок 450 р.</label>
+                <p>День в день, в течение 4-х часов (пн-пт с 10-19 часов). В пределах МКАД. Доставка осуществляется только по предоплате.</p>
                 <span>Дополнительная услуга — подарочная упаковка</span>
-                <input type="radio" name="get" id="4">
-                <span>Самовывоз из пункта выдачи заказов   0 р.</span>
+                    </li>
+                <li>
+                    <input type="radio" name="deliveryMethod" value="me" id="deliveryMe" class="radioBtn">
+                <label for="deliveryMe">Самовывоз из пункта выдачи заказов   0 р.</label>
                 <span>1-2 рабочих дня.</span>
-            </div>
+                </li>
+            </ul>
         </div>
         <div class="address">
             <span class="addresstitle titleText">Адрес доставки</span>
