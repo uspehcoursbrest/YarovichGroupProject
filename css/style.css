@@ -441,18 +441,56 @@ footer > div > div > div {
 
 
 /*Корпоративным клиентам*/
+.order {
+    width: 340px;
+    float: left;
+}
+.discriptionClient {
+    width: calc(100% - 340px);
+    float: left;
+}
+.titleOrder {
+    width: 280px;
+}
 .titleOrder span,a {
     font-size: 13px;
+    line-height: 22px;
     color: #333333;
     text-decoration: none;
+}
+.form > div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    width: 280px;
+    padding-top: 16px;
+}
+.clientForm input {
+    height: 30px;
 }
 
 .clientForm label {
     font-size: 13px;
+    line-height: 22px;
     font-style: italic;
     color: #aaaaaa;
 }
+.clientForm .logoIn{
+    display: flex;
+    flex-direction: column;
+}
 
+.clientForm #num {
+    width: 85px;
+    height: 30px;
+}
+.clientForm #date {
+    width: 110px;
+}
+.clientForm #message {
+    width: 285px;
+    height: 125px;
+}
 .clientForm .logoIn span:last-child {
     font-size: 11px;
     color: #999999;
@@ -463,6 +501,7 @@ footer > div > div > div {
     line-height: 22px;
     color:#666666 ;
     font-style: normal;
+
 }
 
 .btnOrange input{
@@ -472,6 +511,10 @@ footer > div > div > div {
     background-color: #ff7200;
 
 }
+.discriptionClient .list {
+    width: 615px;
+    padding-bottom: 8px;
+}
 
 .discriptionClient span {
     font-size: 25px;
@@ -480,11 +523,12 @@ footer > div > div > div {
     font-weight: 600;
 }
 
-.discriptionClient p {
+.discriptionClient .list p {
     font-size: 13px;
     line-height: 22px;
     color:#333333 ;
     font-weight: 400;
+    padding: 16px 0px;
 }
 .btnGreen input {
     font-size: 14px;
