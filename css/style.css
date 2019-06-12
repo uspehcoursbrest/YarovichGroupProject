@@ -23,6 +23,21 @@ ul {
     padding: 0 15px;
 }
 
+a:hover, button:hover {
+    opacity: 0.7;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.noCall:hover {
+    border-bottom: none;
+}
+.catalogMenu a:hover {
+    border-bottom: none;
+
+}
 .invistLink {
     position: relative;
     z-index: 1;
@@ -60,6 +75,10 @@ ul {
     text-align: right;
 }
 
+header {
+    border-top: 8px solid #64ba4a;
+
+}
 header .login {
     font-size: 13px;
     line-height: 18px;
@@ -110,6 +129,7 @@ header .basket span {
 
 header [class*="icon"] {
     color: #caebd4;
+    padding-right: 10px;
 }
 
 header .login [class*="icon"] {
@@ -228,12 +248,12 @@ header .logo img {
 .catalogMenu li {
     font-size: 13px;
     line-height: 16px;
-    border-bottom: 1px dashed #666666;
 }
 
 .catalogMenu li a {
     text-decoration: none;
     color: #666666;
+    border-bottom: 1px dashed #666666;
 }
 
 .cards .card {
@@ -391,6 +411,19 @@ header .logo img {
 .radioBtn + label {
     cursor: pointer;
 }
+.map {
+    position: relative;
+    width: 100%;
+    height: 320px;
+}
+.map iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
 .acardion .title {
     padding-left: 25px;
     position: relative;
@@ -468,7 +501,7 @@ footer > div > div > div {
 .clientForm input {
     height: 30px;
 }
-.clientForm ю
+
 .clientForm label {
     font-size: 13px;
     line-height: 22px;
