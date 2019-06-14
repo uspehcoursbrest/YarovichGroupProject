@@ -93,7 +93,7 @@ header .menu a {
     font-size: 13px;
     line-height: 28px;
     color: #333333;
-   
+
 }
 
 header .tel {
@@ -499,6 +499,17 @@ footer > div > div > div {
 
 
 /*Корпоративным клиентам*/
+.breadcrumbs {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.breadcrumbs a,
+.breadcrumbs span {
+    font-size: 12px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #999999;
+}
 .order {
     width: 340px;
     float: left;
@@ -528,6 +539,15 @@ footer > div > div > div {
 
 }
 
+.form {
+    background-color: #f9f9f9;
+    width: 310px;
+}
+
+.form .clientForm span {
+    font-size: 13px;
+}
+
 .form > div {
     display: flex;
     flex-direction: column;
@@ -540,16 +560,41 @@ footer > div > div > div {
     height: 30px;
 }
 
+.file input {
+    display: none;
+}
+
+.form .file label {
+    font-size: 13px;
+    line-height: 22px;
+    font-style: normal;
+    text-decoration: underline;
+    color: #229647;
+}
+
 .clientForm label {
     font-size: 13px;
     line-height: 22px;
     font-style: italic;
-    color: #aaaaaa;
+    color: #666666;
 }
 
-.clientForm .logoIn {
-    display: flex;
-    flex-direction: column;
+.btnYN .logoIn{
+    float: left;
+    width: 150px;
+}
+
+.btnYN ul {
+    float: right;
+    display: block;
+    vertical-align: top;
+    width: 108px;
+}
+
+.btnYN li {
+    display: inline-block;
+    text-align: right;
+    padding-right: 30px;
 }
 
 .clientForm #num {
@@ -571,7 +616,7 @@ footer > div > div > div {
     color: #999999;
 }
 
-.clientForm .btnY label, .btnN label {
+.clientForm li label {
     font-size: 13px;
     line-height: 22px;
     color: #666666;
@@ -584,6 +629,9 @@ footer > div > div > div {
     line-height: 22px;
     color: white;
     background-color: #ff7200;
+    border: none;
+    width: 130px;
+    height: 30px;
 
 }
 
@@ -599,6 +647,7 @@ footer > div > div > div {
     font-weight: 600;
 }
 
+
 .discriptionClient .list p {
     font-size: 13px;
     line-height: 22px;
@@ -612,8 +661,12 @@ footer > div > div > div {
     line-height: 22px;
     color: white;
     background-color: #64ba4a;
-
+    width: 195px;
+    height: 32px;
+    border: none;
+    margin-bottom: 80px;
 }
+
 
 .form .clientForm:nth-child(5) span {
     font-size: 11px;

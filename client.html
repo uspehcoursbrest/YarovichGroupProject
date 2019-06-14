@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Корпоративным клиентам</title>
@@ -47,7 +47,11 @@
 </header>
 <!--Контент-->
 <div class="container">
-    <div class="content">
+<div class="content clear">
+    <div class="breadcrumbs">
+        <a href="#">Главная</a>
+        <span>/ Корпоративным клиентам</span>
+    </div>
         <div class="order">
             <div class="titleOrder">
                 <span>Для расчета заказа заполните форму ниже, или позвоните нам</span>
@@ -56,55 +60,55 @@
             <form action="#">
                 <div class="form">
                     <!--Организация-->
-                    <div class="clientForm">
+                    <div class="clientForm name">
                         <label for="name">Название организации</label>
-                        <input type="text" id="name">
+                        <input type="text" name="name" id="name">
                     </div>
                     <!--Контакты-->
-                    <div class="clientForm">
+                    <div class="clientForm contact">
                         <label for="contact">Контактное лицо</label>
-                        <input type="text" id="contact">
+                        <input type="text" name="contact" id="contact">
                     </div>
                     <!--Телефон-->
-                    <div class="clientForm">
+                    <div class="clientForm telephone">
                         <label for="telephone">Номер телефона</label>
-                        <input type="text" id="telephone">
+                        <input type="text" name="telephone" id="telephone">
                     </div>
                     <!--Нанесение логотипа-->
-                    <div class="clientForm">
+                    <div class="clientForm btnYN clear">
                         <div class="logoIn">
                             <span>Нанесение логотипа</span>
                             <span>занимает 20 рабочих дней</span>
                         </div>
-                        <div class="btn">
-                            <div class="btnY">
+                        <ul>
+                            <li class="clear">
                                 <label for="yes">Да</label>
                                 <input type="radio" name="btnYN" id="yes">
-                            </div>
-                            <div class="btnN">
+                            </li>
+                            <li class="clear">
                                 <label for="no">Нет</label>
                                 <input type="radio" name="btnYN" id="no">
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                     <!--Прикрепить логотип-->
-                    <div class="clientForm">
+                    <div class="clientForm file">
                         <input type="file" name="addLogo" id="addLogo">
                         <label for="addLogo">Прикрепить логотип</label>
                         <span>.cdr, .ai, .eps, .tiff</span>
                     </div>
                     <!--Количество-->
-                    <div class="clientForm">
+                    <div class="clientForm num">
                         <label for="num">Количество фигурок</label>
-                        <select name="" id="num">
+                        <select name="num" id="num">
                             <option value="150">150</option>
                         </select>
                     </div>
                     <!--Дата-->
-                    <div class="clientForm">
+                    <div class="clientForm date">
                         <label for="date">Подготовить заказ к</label>
                         <input type="date" id="date">
-                        <img src="" alt="">
+                        <span class="icon-vk"></span>
                     </div>
                     <!-- Дополнительная информация-->
                     <div class="clientForm">
@@ -153,8 +157,8 @@
 <!--Подвал. Повторяется на каждой странице-->
 <footer>
     <div class="container">
-        <div>
-            <ul>
+        <div class="clear">
+            <ul class="menu">
                 <li>
                     <ul>
                         <li><a href="#">Оптовикам</a></li>
