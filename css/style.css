@@ -579,24 +579,13 @@ footer > div > div > div {
     color: #666666;
 }
 
-.btnYN .logoIn{
-    float: left;
-    width: 150px;
+.form .logoIn {
+    display: flex;
 }
-
-.btnYN ul {
-    float: right;
-    display: block;
-    vertical-align: top;
-    width: 108px;
+.form .logoIn .logoInTit {
+    display: flex;
+    flex-direction: column;
 }
-
-.btnYN li {
-    display: inline-block;
-    text-align: right;
-    padding-right: 30px;
-}
-
 .clientForm #num {
     width: 85px;
     height: 30px;
@@ -611,7 +600,7 @@ footer > div > div > div {
     height: 125px;
 }
 
-.clientForm .logoIn span:last-child {
+.clientForm .logoInTit span:last-child {
     font-size: 11px;
     color: #999999;
 }
