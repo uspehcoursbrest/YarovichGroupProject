@@ -1,4 +1,4 @@
-* {
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
@@ -17,282 +17,485 @@ ul {
     list-style-type: none;
 }
 
+input, button, textarea {
+    outline: none;
+    font-family: "Open Sans";
+}
+
 .container {
     width: 1010px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-a:hover, button:hover {
-    opacity: 0.7;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+/*Отмена обтекания*/
+.cfix::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
-.noCall:hover {
-    border-bottom: none;
+.table {
+    display: table;
 }
 
-.catalogMenu a:hover {
-    border-bottom: none;
-
+.tCell {
+    display: table-cell;
 }
 
-.invistLink {
+.table.full {
+    width: 100%;
+}
+
+/*Для невидимой ссылки-блока*/
+.invisLink {
     position: relative;
     z-index: 1;
 }
 
-.invistLink > a {
+.invisLink > a {
     display: block;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 0px;
+    top: 0px;
     width: 100%;
     height: 100%;
     z-index: 7;
     overflow: hidden;
     text-indent: 200%;
-    word-space: nowrap;
+    white-space: nowrap;
 }
 
-.topLine {
-    display: table;
-    width: 100%;
+.invisLink > a:hover{
+    opacity: 0.7;
 }
 
-.topLine > div {
-    display: table-cell;
-    width: 33%;
+* a {
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/*---------------------------Хэдэр---------------------------*/
+header {
+    padding-bottom: 18px;
+    padding-top: 18px;
+    border-top: 8px solid #64ba4a;
+}
+
+header .adaptHeader{
+    display: none;
+}
+
+/*Для табличного*/
+header .tCell {
+    width: 33.3333%;
     vertical-align: top;
 }
 
-.topLine .logo {
+/*Для табличного*/
+header .logo {
     text-align: center;
 }
 
-.topLine .right {
+/*Для табличного*/
+header .right {
     text-align: right;
-}
-
-header {
-    border-top: 8px solid #64ba4a;
-
 }
 
 header .login {
     font-size: 13px;
     line-height: 18px;
     color: #0069b4;
+    padding-bottom: 50px;
+    position: relative;
+    padding-left: 26px;
+}
+
+header .login:hover {
+    text-decoration: none;
+}
+
+/*Для блочного способа*/
+.menu li {
+    display: inline-block;
+    margin-right: 19px;
+}
+
+header .menu{
+    padding-top: 38px;
+}
+
+header .menu :hover {
+    text-decoration: none;
 }
 
 header .menu a {
     font-size: 13px;
     line-height: 28px;
     color: #333333;
-
 }
 
-header .tel {
+header .phone {
     font-size: 20px;
     line-height: 20px;
     color: #333333;
     text-decoration: none;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+    display: block;
 }
 
-header .noCall {
+header .phone:hover {
+    color: #1a9547;
+}
+
+header .callback {
     font-size: 12px;
     line-height: 16px;
     text-decoration: none;
     color: #0069b4;
+    text-decoration: none;
     border-bottom: 1px dashed #0069b4;
+    -webkit-transition: border-bottom 0.3s;
+    -moz-transition: border-bottom 0.3s;
+    -ms-transition: border-bottom 0.3s;
+    -o-transition: border-bottom 0.3s;
+    transition: border-bottom 0.3s;
+    padding-top: 7px;
+    display: inline-block;
 }
 
-header .time {
+header .timing{
+    padding-top: 13px;
+    padding-bottom: 19px;
     font-size: 13px;
     line-height: 19px;
+    font-weight: normal;
     color: #999999;
+
+}
+
+header .callback:hover {
+    border-bottom: 1px dashed transparent;
+}
+
+header timing {
+    font-size: 13px;
+    line-height: 19px;
+    color: #333333;
 }
 
 header .basket {
     font-size: 13px;
     line-height: 22px;
-    color: #299c53;
+    color: #333333;
     text-decoration: none;
     display: inline-block;
     padding-left: 28px;
     background-repeat: no-repeat;
     background-position: left center;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
 }
 
-header .basket span {
-    color: #333333;
+header .basket:hover {
+    color: #1a9547;
+}
+
+header.basket span {
+    color: #1a9547;
 }
 
 header [class*="icon"] {
     color: #caebd4;
-    padding-right: 10px;
 }
 
 header .login [class*="icon"] {
     font-size: 18px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
-header .tel [class*="icon"] {
+header .phone [class*="icon"] {
     font-size: 20px;
 }
 
-header .logo img {
-    height: 140px;
-    width: 155px;
-}
+/*---------------------------Контент---------------------------*/
 
-header .menu {
-    width: 305px;
-    height: 75px;
-}
-
-.menu li {
-    display: inline-block;
-    margin-right: 18px;
-}
-
-.advantages .item span {
-    font-size: 41px;
-    font-weight: bold;
-    line-height: 17px;
-    color: #333333;
-}
-
-.banner .left {
-    width: 305px;
-    height: 365px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.banner .right {
-    width: 640px;
-    height: 365px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
+/*------------------Банер------------------*/
+/*Для флексбоксов*/
 .banner {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-/*блок преимуществ*/
-.subscribe {
-    width: 320px;
-    float: left;
+.banner .sale {
+    width: 305px;
+    height: 360px;
 }
 
+.banner .slider{
+    width: 645px;
+    position: relative;
+}
+
+.banner .slider .item{
+    width: 645px;
+    height: 360px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#customDots{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+#customDots button{
+    padding: 0px;
+    border: none;
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 0.7;
+    margin: 0px 4px;
+}
+
+#customDots button:hover{
+    opacity: 1;
+}
+
+/*--------------------------------------------------*/
+.banner > div {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*------------------------------------------------------*/
+
+/*------------------Преимущества------------------*/
+
+.advSub {
+    margin-bottom: 30px;
+}
+
+/*Для обтекания*/
 .advantages {
     width: calc(100% - 320px);
     float: left;
 }
 
-.clear::after {
-    content: "";
+/*Для обтекания*/
+.advantages .item {
+    width: 25%;
+    float: left;
+}
+
+/*Переносы с br*/
+.advantages span {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+    color: #333333;
     display: block;
-    clear: both;
+    margin-top: 18px;
 }
 
 .advantages .item p {
     font-size: 12px;
     line-height: 14px;
     color: #666666;
+    margin-top: 11px;
 }
 
-.advantages .item img {
-    width: 40px;
-    height: 40px;
+.subScribe {
+    background-color: #63b94a;
+    width: 320px;
+    float: left;
 }
 
-.subscribe label {
+.subScribe form {
+    padding: 10px 19px 19px 19px;
+}
+
+.subScribe label {
+    line-height: 24px;
     font-size: 16px;
     color: #ffffff;
 }
 
-.subscribe {
-    background-color: #64ba4a;
-}
-
-.subscribe input {
+.subScribe input {
     font-size: 13px;
     line-height: 37px;
     color: #999999;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    padding-left: 12px;
 }
 
-.subscribe button {
+/*Для табличного способа*/
+.subScribe .wrap {
+    width: 100%;
+    display: table;
+}
+
+/*Для табличного способа*/
+.subScribe button {
     font-size: 13px;
     line-height: 37px;
     text-align: center;
     color: #ffffff;
+    border: none;
+    background-color: #259c48;
+    /*Для табличного способа*/
     display: table-cell;
     vertical-align: middle;
     width: 188px;
-    background-color: #259c47;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    opacity: 1;
 }
 
-.subscribe .wrap {
-    display: table;
-    width: 100%;
+.subScribe button:hover {
+    opacity: 0.7;
 }
 
-.subscribe .wrap span {
-    display: table-cell;
-    vertical-align: middle;
+/*Для табличного способа*/
+.subScribe .wrap span {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.5);
+    /*Для табличного способа*/
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 25px;
 }
 
-.catalogMenu li {
-    display: inline-block;
+/*------------------Каталог------------------*/
+.catalog {
+    margin-bottom: 60px;
 }
 
-.catalogMenu li + li {
-    margin-right: 18px;
+.filter {
+    margin-bottom: 30px;
+    display: block;
 }
 
-.catalogMenu li {
+.filter ul{
+    float: left;
+}
+
+/*Для блочного способа*/
+.filter li {
     font-size: 13px;
     line-height: 16px;
+    border-bottom: 1px dashed #666666;
+    display: inline-block;
+    -webkit-transition: border-bottom 0.3s;
+    -moz-transition: border-bottom 0.3s;
+    -ms-transition: border-bottom 0.3s;
+    -o-transition: border-bottom 0.3s;
+    transition: border-bottom 0.3s;
 }
 
-.catalogMenu li a {
+.filter li:hover {
+    border-bottom: none;
+}
+
+/*Для блочного способа Отступ*/
+.filter li + li {
+    margin-left: 15px;
+}
+
+.filter li a {
     text-decoration: none;
     color: #666666;
-    border-bottom: 1px dashed #666666;
 }
 
-.cards .card {
-    font-size: 15px;
-    line-height: 22px;
-    color: #333333;
+.selFilter {
+    display: none;
 }
 
-.cards .photo {
-    width: 220px;
-    height: 220px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+.view{
+    display: block;
+    float: right;
 }
 
+.view span[class*="icon"] {
+    font-size: 17px;
+}
+
+.view .icon-filter1 {
+    color: #c1e5cb;
+}
+
+.view .icon-filter2 {
+    color: #289847;
+}
+
+/*Для CSS Grid*/
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 34px;
+}
+
+/*Для позиционного*/
 .card {
     position: relative;
+    border-bottom: 1px solid #e4e4e4;
+    z-index: 1;
 }
 
-.status {
+.thumbnail{
+    position: absolute;
+    display: none;
+    top: -12px;
+    right: -15px;
+    padding: 11px;
+    width: 313px;
+    height: 356px;
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 7px 10px rgba(0,0,0,0.1);
+    z-index: -1;
+}
+
+.thumbnail .pic{
+    margin-bottom: 10px;
+    width: 53px;
+    height: 53px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.thumbnail .pic.active{
+    border: 1px solid #259c47;
+}
+
+/*Для позиционного*/
+.cards .card .status {
     position: absolute;
     display: block;
     top: -3px;
@@ -303,17 +506,21 @@ header .menu {
     text-align: center;
 }
 
-.status.hit {
-    background-color: #6eddcc;
+.card .img {
+    width: 100%;
+    height: 220px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 13px;
 }
 
-.status.discount {
-    background-color: #ffed03;
-}
-
-.card {
-    border-bottom: 1px solid #e4e4e4;
-    padding-bottom: 9px;
+.card .title {
+    font-size: 15px;
+    line-height: 22px;
+    color: #333333;
+    display: block;
 }
 
 .card a {
@@ -322,47 +529,188 @@ header .menu {
     color: #0069b4;
 }
 
+.card a:hover{
+    opacity: 0.7;
+}
+
 .card .price {
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
     color: #333333;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .card .price .old {
     font-size: 14px;
     font-weight: normal;
     line-height: 16px;
-    color: #666666;
     text-decoration: line-through;
+    color: #666666;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
 }
 
-.card button {
+.card .content {
+    position: relative;
+    min-height: 95px;
+}
+
+.card .content .buy {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0px;
+}
+
+.card .buy button {
+    background-color: #ff7100;
+    width: 103px;
+    height: 32px;
     font-size: 14px;
-    line-height: 32px;
+    line-height: 16px;
     text-align: center;
     color: #ffffff;
+    cursor: pointer;
+    float: right;
+    display: inline-block;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    border: 1px solid transparent;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+.card .buy button:hover {
+    border: 1px solid #ff7100;
+    background-color: #fff;
+    color: #ff7100;
 }
 
-.socials h2 {
+.status.hit {
+    background-color: #6eddcc;
+}
+
+.status.discount {
+    background-color: #ffed03;
+}
+
+.status.new {
+    background-color: #78ec71;
+}
+
+/*------------------СоцСети------------------*/
+.socials {
+    margin-bottom: 30px;
+}
+
+.socials h3 {
     font-size: 18px;
     font-weight: 600;
     line-height: 22px;
     text-align: center;
     color: #666666;
+    margin-bottom: 60px;
 }
 
-.tabs li a {
+/*Для флексбоксов*/
+.socials .wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.socialItem {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.socialItem:first-child, .socialItem:last-child {
+    width: 290px;
+    height: 400px;
+}
+
+.socialItem:nth-child(2) {
+    width: 350px;
+    height: 400px;
+}
+
+/*------------------Информация------------------*/
+.info {
+    padding-bottom: 30px;
+}
+
+.info.ui-tabs{
+    padding: 0;
+    padding-bottom: 30px;
+}
+
+.info.ui-tabs .ui-tabs-nav{
+    padding: 0;
+}
+
+.info.ui-tabs .ui-tabs-nav li{
+    padding: 0;
+}
+
+.info.ui-tabs .ui-tabs-nav li.ui-tabs-active{
+    margin: 0;
+    padding: 0;
+}
+
+.info.ui-tabs .ui-tabs-nav .ui-tabs-anchor{
+    padding: 0 15px;
+}
+
+.info.ui-tabs .ui-tabs-panel{
+    padding: 0;
+}
+
+.info .tabs a{
+    display: block;
+    font-size: 14px;
+    color: #999;
+    text-decoration: none;
+    padding: 0 15px;
+    outline: none;
+    height: 45px;
+    line-height: 45px;
+}
+
+.info .tabs li.ui-tabs-active a,
+info .tabs li a:hover{
+    border: none;
+    background-color: #f2fff7;
+    color: #1c9847;
+    cursor: pointer;
+}
+
+.info .tabs {
+    margin-bottom: 20px;
+}
+
+.info .tabs li {
+    display: inline-block;
+}
+
+.info .tabs li a {
+    width: 100%;
     font-size: 14px;
     text-decoration: none;
     line-height: 45px;
     color: #999999;
+    padding-left: 12px;
+    padding-right: 18px;
+    height: 100%;
+    display: inline-block;
+}
+
+.info .tabs li a:hover {
+    background-color: #f2fff7;
+    color: #1c9847;
 }
 
 .info .content {
@@ -373,10 +721,681 @@ header .menu {
 
 .info .title {
     text-transform: uppercase;
+    position: relative;
+    display: block;
+    padding-left: 25px;
+}
+
+.info .title:before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid #333333;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    margin-top: -3px;
+}
+
+.info .title.active::before{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+/*---------------------------Футер---------------------------*/
+footer {
+    padding-top: 33px;
+    padding-bottom: 53px;
+    font-size: 13px;
+    line-height: 22px;
+    color: #ffffff;
+    background-color: #64ba4a;
+}
+
+footer a {
+    display: table;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer a:hover {
+    opacity: 0.7;
+}
+
+/*Для обтекания*/
+.footMenu {
+    width: 50%;
+    float: left;
+}
+
+/*Для обтекания*/
+.footMenu .col {
+    width: 50%;
+    float: left;
+}
+
+/*Для обтекания*/
+.contacts {
+    float: left;
+    width: 25%;
+}
+
+.contacts a[class*="icon-soc"] {
+    font-size: 21px;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+/*Для обтекания*/
+.copyright {
+    float: left;
+    width: 25%;
+}
+
+.copyright span {
+    display: block;
+    text-align: right;
+}
+
+.copyright span a {
+    display: inline;
+    border-bottom: 1px solid #ffffff;
+}
+
+.copyright span a:hover{
+    border-bottom: none;
+}
+
+.call {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #64ba4a;
+    position: fixed;
+    right: 150px;
+    bottom: 200px;
+    border-radius: 50px;
+}
+
+.call [class*="icon"] {
+    font-size: 25px;
+    line-height: 50px;
+    color: #ffffff;
+}
+
+.call::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: #64ba4a;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.2;
+    color: #ffffff;
+    animation: circleFill 2.2s infinite ease-in-out;
+}
+
+.call::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    border: 1px solid #64ba4a;
+    border-radius: 50%;
+    z-index: -1;
+    animation: circle 2.2s infinite ease-in-out;
+}
+
+@keyframes circleFill {
+    0% {
+        -webkit-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        -o-transform: scale(0.5);
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    100% {
+        -webkit-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        -o-transform: scale(0.5);
+        transform: scale(0.5);
+        opacity: 0.2;
+    }
+}
+
+@keyframes circle {
+    0% {
+        -webkit-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        -o-transform: scale(0.5);
+        transform: scale(0.5);
+        opacity: 0.01;
+    }
+    30% {
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        transform: scale(0.7);
+        opacity: 0.5;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.01;
+    }
+}
+
+/*------------------------------------------------------------------------
+---------------------------Корпоративным клиентам-------------------------
+------------------------------------------------------------------------*/
+
+.breadcrumbs {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 12px;
+    color: #999999;
+    padding-bottom: 22px;
+    padding-top: 16px;
+    border-top: 1px solid #e4e4e4;
+}
+
+.breadcrumbs li {
+    display: inline-block;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: #999999;
+}
+
+.breadcrumbs a:hover {
+
+    border-bottom: 1px solid #999999;
+}
+
+.clientWrap {
+    padding-bottom: 55px;
+}
+
+.clientWrap .left {
+    width: 305px;
+    float: left;
+}
+
+.clientWrap .left p {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/*---------------Форма---------------*/
+.clientWrap .left .formClientWrap {
+    background-color: #f9f9f9;
+    width: 100%;
+    padding: 14px 10px 20px 10px;
+}
+
+.clientWrap .left .labelFormClient {
+    font-size: 13px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 22px;
+    color: #666666;
+}
+
+/*Общая ширина input-ов*/
+.clientWrap .widthClientForm {
+    width: 283px;
+}
+
+/*Общая высота input-ов*/
+.clientWrap .heightClientForm {
+    height: 27px;
+}
+
+.clientWrap .left input {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #333333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.clientWrap .addLogo .leftLogo {
+    width: 145px;
+    float: left;
+}
+
+.clientWrap .addLogo .writeLogo {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #333333;
+}
+
+.clientWrap .left .signature {
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 11px;
+    color: #999999;
+    display: block;
+}
+
+.clientWrap .addLogo .rightLogo {
+    width: calc(100% - 175px);
+    float: right;
+}
+
+.clientWrap .addLogo .rightLogo li {
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+.clientWrap .left .addLogo label {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 19px;
+    color: #666666;
+    display: inline-block;
+    position: relative;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.clientWrap .addLogo input {
+    display: none;
+}
+.addLogo .radioBtn:not(checked) + label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 27px;
+    width: 19px;
+    height: 19px;
+    border: 2px solid #d4d4d4;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.addLogo .radioBtn:not(checked) + label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 33px;
+    width: 7px;
+    height: 7px;
+    background-color: #51bf87;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.addLogo .radioBtn:checked + label::before {
+    border-color: #51bf87;
+}
+
+.addLogo .radioBtn:checked + label::after {
+    opacity: 1;
+}
+
+.addLogo .radioBtn + label {
+    cursor: pointer;
+}
+
+.clientWrap .left .addFile input {
+    display: none;
+}
+
+.clientWrap .left .addFile {
+    margin-top: 8px;
+}
+
+.clientWrap .left .addFile label {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 22px;
+    text-decoration: underline;
+    color: #229647;
+    cursor: pointer;
+}
+
+.clientWrap .left .addFile label:hover {
+    opacity: 0.7;
+}
+
+.clientWrap .left .howMany {
+    margin-top: 14px;
+    margin-bottom: 7px;
+}
+
+.clientWrap .left .howMany select {
+    width: 84px;
+    display: block;
+}
+
+.howMany{
+    width: 290px;
+}
+
+.howMany .selectric {
+    width: 84px;
+    height: 28px;
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+}
+
+.howMany .selectric .label{
+    font-size: 13px;
+    line-height: 26px;
+    color: #333333;
+}
+
+.howMany .selectric .button{
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    width: 0px;
+    height: 0px;
+    border-top: 7px solid #00a48c;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    margin-top: -2px;
+    background-color: transparent;
+}
+
+.howMany .selectric .button::after{
+    display: none;
+}
+
+.howMany .selectric-items{
+    border: 1px solid #d6d6d6;
+}
+
+.howMany .selectric-items li{
+    padding: 0;
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 26px;
+    color: #333333;
+    background-color: #fff;
+}
+
+.howMany .selectric-items li:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.clientWrap .date div input {
+    width: 106px;
+    display: inline-block;
+}
+
+.clientWrap .date div img {
+    margin-left: 6px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.clientWrap .addInf textarea {
+    height: 124px;
+    margin-bottom: 22px;
+}
+
+.clientWrap .left button {
+    border: none;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #ff7200;
+    width: 130px;
+    height: 31px;
+    cursor: pointer;
+}
+
+.clientWrap .left button:hover {
+    opacity: 0.7;
+}
+
+/*----------Конец формы-------------*/
+.clientWrap .right {
+    width: calc(100% - 310px);
+    float: left;
+    padding-left: 35px;
+    padding-bottom: 20px;
+}
+
+/*Косяк с open sans*/
+.clientWrap .right h3 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #333333;
+    padding-bottom: 12px;
+}
+
+.clientWrap .right p {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #333333;
+    padding-bottom: 23px;
+}
+
+.clientWrap .right p:last-child {
+    padding-bottom: 18px;
+}
+
+.clientWrap .right button {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    background-color: #64ba4a;
+    width: 194px;
+    height: 31px;
+    cursor: pointer;
+}
+
+.clientWrap .right button:hover {
+    opacity: 0.7;
+}
+
+/*------------------------------------------------------------------------
+---------------------------Новости подробно-------------------------
+------------------------------------------------------------------------*/
+h2News {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #333333;
+    margin-bottom: 40px;
+}
+
+h3News {
+    margin-bottom: 5px;
+}
+
+.dateNews {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #aaaaaa;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.newsImg {
+    background-color: #b3b3b3;
+    width: 100%;
+    height: 208px;
+    margin-bottom: 20px;
+}
+
+.newsText {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 19px;
+    color: #333333;
+    margin-bottom: 28px;
+}
+
+.newsText p {
+    margin-bottom: 19px;
+}
+
+.newsText + a {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #0069b4;
+    margin-bottom: 45px;
+    display: table;
+}
+
+.newsText + a:hover{
+    opacity: 0.7;
+}
+
+/*------------------------------------------------------------------------
+---------------------------Оформление заказа-------------------------
+------------------------------------------------------------------------*/
+
+/*Общая ширина для input-ов*/
+.widthOrdInp {
+    width: 288px;
+}
+
+/*Общая высота для input-ов*/
+.heightOrdInp {
+    height: 27px;
+}
+
+/*Рамка*/
+.bordOrd {
+    border: 1px solid #d6d6d6;
+}
+
+.h2News {
+    font-size: 25px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 22px;
+    color: #333333;
+    margin-bottom: 42px;
+}
+
+.city {
+    margin-top: 14px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.city select {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #333333;
+    display: block;
+}
+
+/*Красные звезды*/
+.starLabel {
+    font-size: 13px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 22px;
+    color: #666666;
+}
+
+.starLabel > span {
+    font-size: 13px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 22px;
+    color: #ed1c24;
+}
+
+.methodDelivery {
+    margin-top: 15px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.methodDelivery span:first-child {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.methodDelivery label {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 19px;
+    color: #333333;
+}
+
+.methodDelivery p {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #666666;
+}
+
+.methodDelivery .additionalService {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #f26522;
+}
+
+.paymentMethod span {
+
 }
 
 .orderList li {
+    width: 460px;
     padding-left: 40px;
+    margin-top: 10px;
 }
 
 .orderList label {
@@ -393,7 +1412,7 @@ header .menu {
 }
 
 .radioBtn:not(checked) + label::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 0;
@@ -406,11 +1425,11 @@ header .menu {
 }
 
 .radioBtn:not(checked) + label::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
-    top: 9px;
-    left: 9px;
+    top: 7px;
+    left: 7px;
     width: 8px;
     height: 8px;
     background-color: #51bf87;
@@ -431,238 +1450,111 @@ header .menu {
     cursor: pointer;
 }
 
-.map {
-    position: relative;
-    width: 100%;
-    height: 320px;
-}
-
-.map iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-
-}
-
-.acardion .title {
-    padding-left: 25px;
-    position: relative;
-}
-
-.acardion .title::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #333333;
-    /*border-bottom: 5px solid black;*/
-    /*background-color: #333333;*/
-    position: absolute;
-    left: -5px;
-    top: 7px;
-}
-
-footer {
-    font-size: 13px;
-    line-height: 22px;
-    color: #ffffff;
-}
-
-footer a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-footer a.soc {
-    font-size: 21px;
-}
-
-footer {
-    background-color: #64ba4a;
-
-}
-
-/*назначить дивам классы в подвале*/
-footer > div > div > ul {
-    width: 50%;
-    float: left;
-}
-
-footer > div > div > div {
-    width: 25%;
-    float: left;
-}
-
-
-/*Корпоративным клиентам*/
-.breadcrumbs {
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-.breadcrumbs a,
-.breadcrumbs span {
-    font-size: 12px;
-    line-height: 22px;
-    text-decoration: none;
-    color: #999999;
-}
-.order {
-    width: 340px;
-    float: left;
-}
-
-.discriptionClient {
-    width: calc(100% - 340px);
-    float: left;
-}
-
-.titleOrder {
-    width: 280px;
-}
-
-.titleOrder span {
-    font-size: 13px;
-    line-height: 22px;
-    color: #333333;
-    text-decoration: none;
-}
-
-.order .titleOrder a {
-    font-size: 13px;
-    line-height: 22px;
-    color: #333333;
-    text-decoration: none;
-
-}
-
-.form {
-    background-color: #f9f9f9;
-    width: 310px;
-}
-
-.form .clientForm span {
-    font-size: 13px;
-}
-
-.form > div {
-    display: flex;
-    flex-direction: column;
-    margin-left: 12px;
-    width: 280px;
+.addressDelivery {
     padding-top: 16px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4e4e4;
 }
 
-.clientForm input {
-    height: 30px;
+.addressDelivery div {
+    margin-top: 9px;
 }
 
-.file input {
-    display: none;
+.addressDelivery input {
+    display: block;
 }
 
-.form .file label {
-    font-size: 13px;
-    line-height: 22px;
-    font-style: normal;
-    text-decoration: underline;
-    color: #229647;
+.addressDelivery textarea {
+    display: block;
 }
 
-.clientForm label {
-    font-size: 13px;
-    line-height: 22px;
-    font-style: italic;
-    color: #666666;
+.addressDelivery .table .tCell {
+    padding-right: 39px;
 }
 
-.form .logoIn {
-    display: flex;
-}
-.form .logoIn .logoInTit {
-    display: flex;
-    flex-direction: column;
-}
-.clientForm #num {
-    width: 85px;
-    height: 30px;
+.addressDelivery .table .tCell input {
+    width: 57px;
 }
 
-.clientForm #date {
-    width: 110px;
+.addressDelivery .table .tCell:last-child input {
+    width: 95px;
+    padding-right: 0px;
 }
 
-.clientForm #message {
-    width: 285px;
-    height: 125px;
+.addressDelivery div textarea {
+    height: 104px;
 }
 
-.clientForm .logoInTit span:last-child {
-    font-size: 11px;
-    color: #999999;
+.paymentMethod {
+    margin-top: 16px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e4e4e4;
 }
 
-.clientForm li label {
-    font-size: 13px;
-    line-height: 22px;
-    color: #666666;
-    font-style: normal;
-
-}
-
-.btnOrange input {
-    font-size: 14px;
-    line-height: 22px;
-    color: white;
-    background-color: #ff7200;
-    border: none;
-    width: 130px;
-    height: 30px;
-
-}
-
-.discriptionClient .list {
-    width: 615px;
-    padding-bottom: 8px;
-}
-
-.discriptionClient span {
-    font-size: 25px;
-    line-height: 22px;
-    color: #333333;
+.paymentMethod span:first-child {
+    font-size: 15px;
     font-weight: 600;
-}
-
-
-.discriptionClient .list p {
-    font-size: 13px;
     line-height: 22px;
     color: #333333;
-    font-weight: 400;
-    padding: 16px 0px;
+    margin-bottom: 15px;
 }
 
-.btnGreen input {
-    font-size: 14px;
+.paymentMethod label {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 19px;
+    color: #333333;
+}
+
+.paymentMethod p {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #666666;
+}
+
+.dataClient {
+    margin-top: 15px;
+    padding-bottom: 67px;
+}
+
+.dataClient > span {
+    font-size: 15px;
+    font-weight: 600;
     line-height: 22px;
-    color: white;
-    background-color: #64ba4a;
-    width: 195px;
-    height: 32px;
+    color: #333333;
+    margin-bottom: 15px;
+    display: inline-block;
+
+}
+
+.dataClient .starLabel span {
+    font-size: 13px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 22px;
+    color: #ed1c24;
+}
+
+.dataClient div input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.dataClient button {
+    width: 191px;
+    height: 35px;
     border: none;
-    margin-bottom: 80px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #ff7200;
+    margin-top: 23px;
+    cursor: pointer;
 }
 
-
-.form .clientForm:nth-child(5) span {
-    font-size: 11px;
-    color: #999999;
+.dataClient button:hover{
+    opacity: 0.7;
 }
-
-
-
-
-
