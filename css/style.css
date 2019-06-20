@@ -229,7 +229,73 @@ header .login [class*="icon"] {
 header .phone [class*="icon"] {
     font-size: 20px;
 }
+/*---------------HEADER MOBILE-----------------------*/
+header.mobile {
+    display: none;
+    position: relative;
+    padding: 18px 0;
+    background-color: #63b94a;
+}
 
+.mobileWrap {
+    display: table;
+    width: 100%;
+}
+.menuMobile,
+.logoMobile,
+.basketMobile {
+    display: table-cell;
+    width: 25%;
+    vertical-align: middle;
+}
+
+.menuMobile {
+    cursor: pointer;
+}
+
+.menuMobile span{
+    display: block;
+    margin-bottom: 7px;
+    height: 5px;
+    width: 45px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+.menuDropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    z-index: 1;
+    background-color: #63ba49;
+}
+.menuDropdown a {
+    font-size: 13px;
+    line-height: 28px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logoMobile {
+    width: 50%;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.basketMobile {
+    text-align: right;
+}
+.basketMobile a {
+    display: inline-block;
+    width: 44px;
+    height: 37px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 /*---------------------------Контент---------------------------*/
 
 /*------------------Банер------------------*/
@@ -391,7 +457,39 @@ header .phone [class*="icon"] {
     vertical-align: middle;
     padding-left: 25px;
 }
-
+/*для смартфонов*/
+.mobileSub {
+    display: none;
+    margin-bottom: 50px;
+    padding: 0 5px;
+    text-align: center;
+}
+.mobileSub label {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 14px;
+    color: #666666;
+}
+.mobileSub input {
+    float: left;
+    padding: 0 10px;
+    width: 66.6666%;
+    height: 26px;
+    line-height: 26px;
+    color: #999999;
+    outline: none;
+    border: 1px solid #e8e8e8;
+}
+.mobileSub button {
+    float: right;
+    width: 33.3333%;
+    line-height: 45px;
+    color: #ffffff;
+    background-color: #259b43;
+    border: none;
+    outline: none;
+}
 /*------------------Каталог------------------*/
 .catalog {
     margin-bottom: 60px;
@@ -1662,4 +1760,42 @@ h3News {
     .container{
         width: 100%;
     }
+    header,
+    .banner,
+    .advSub,
+    .info {
+        display: none;
+    }
+    header.mobile {
+        display: block;
+    }
+    .cards {
+        display: block;
+    }
+    .card {
+        width: 100%;
+    }
+    .card .img {
+        height: 270px;
+    }
+    .mobileSub {
+        display: block;
+    }
+    .contacts {
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .copyright {
+        width: 100%;
+        text-align: center;
+    }
+    .socLinks {
+        position: relative;
+        bottom: 0;
+    }
+.socials {
+    display: none;
+}
+
 }
