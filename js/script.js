@@ -1,3 +1,13 @@
+window.onload = function() {
+    var button = document.querySelectorAll(".card .buy button");
+    button.forEach(function (i) {
+        i.addEventListener("click", function (event) {
+            alert("Товар добавлен в корзину");
+        })
+    })
+}
+
+
 // $(document).ready(function () {
 //     $('.card').mouseover(function () {
 //         $(this).find('.thumbnail').stop().fadeIn()
