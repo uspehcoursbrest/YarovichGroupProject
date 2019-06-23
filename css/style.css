@@ -984,10 +984,12 @@ footer a:hover {
     background-color: #64ba4a;
     transition: all 0.5s;
 }
+
 .up:hover {
     background-color: #fff;
     border: 2px solid #64ba4a;
 }
+
 .up span {
     border-bottom: solid 18px #fff;
     border-left: solid 10px transparent;
@@ -997,9 +999,11 @@ footer a:hover {
     position: absolute;
     background-color: transparent;
 }
+
 .up:hover span {
     border-bottom: solid 18px #64ba4a;
 }
+
 @keyframes circleFill {
     0% {
         -webkit-transform: scale(0.5);
@@ -1864,7 +1868,15 @@ h3News {
 
     .copyright {
         width: 100%;
+
+    }
+
+    .copyright span {
         text-align: center;
+    }
+
+    footer a {
+        margin: 0 auto;
     }
 
     .socLinks {
@@ -1881,12 +1893,22 @@ h3News {
         flex-direction: column-reverse;
     }
 
+
     .clientWrap .left {
-        width: 305px;
+        width: 100%;
         float: none;
         margin: 0 auto;
     }
-
+    .clientWrap .addLogo .rightLogo {
+        width: 40%;
+        float: right;
+    }
+    .clientWrap .left input {
+        width: 100%;
+    }
+    .clientWrap .addInf textarea {
+        width: 100%;
+    }
     .clientWrap .right {
         width: 100%;
         float: none;
