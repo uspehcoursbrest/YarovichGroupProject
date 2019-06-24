@@ -80,8 +80,8 @@ input, button, textarea {
 
 /*---------------------------Хэдэр---------------------------*/
 header {
-    padding-bottom: 18px;
-    padding-top: 18px;
+    padding-bottom: 15px;
+    padding-top: 20px;
     border-top: 8px solid #64ba4a;
 }
 
@@ -125,7 +125,7 @@ header .login:hover {
 }
 
 header .menu {
-    padding-top: 38px;
+    padding-top: 35px;
 }
 
 header .menu :hover {
@@ -149,6 +149,7 @@ header .phone {
     -o-transition: color 0.3s;
     transition: color 0.3s;
     display: block;
+    padding-top: 2px;
 }
 
 header .phone:hover {
@@ -172,7 +173,7 @@ header .callback {
 }
 
 header .timing {
-    padding-top: 13px;
+    padding-top: 9px;
     padding-bottom: 19px;
     font-size: 13px;
     line-height: 19px;
@@ -381,6 +382,10 @@ header.mobile {
     float: left;
 }
 
+.advantages .item + .item {
+    padding-left: 10px;
+}
+
 /*Переносы с br*/
 .advantages span {
     font-size: 14px;
@@ -461,7 +466,7 @@ header.mobile {
     /*Для табличного способа*/
     display: table-cell;
     vertical-align: middle;
-    padding-left: 25px;
+    /*padding-left: 25px;*/
 }
 
 /*для смартфонов*/
@@ -664,13 +669,13 @@ header.mobile {
 
 .card .content {
     position: relative;
-    min-height: 95px;
+    min-height: 85px;
 }
 
 .card .content .buy {
     position: absolute;
     width: 100%;
-    bottom: 10px;
+    bottom: 5px;
     left: 0px;
 }
 
@@ -860,7 +865,7 @@ info .tabs li a:hover {
 
 /*---------------------------Футер---------------------------*/
 footer {
-    padding-top: 33px;
+    padding-top: 28px;
     padding-bottom: 53px;
     font-size: 13px;
     line-height: 22px;
@@ -890,10 +895,15 @@ footer a:hover {
     float: left;
 }
 
+.footMenu .col + .col {
+    padding-left: 50px;
+}
+
 /*Для обтекания*/
 .contacts {
     float: left;
     width: 25%;
+    padding-left: 30px;
 }
 
 .contacts a[class*="icon-soc"] {
@@ -1061,6 +1071,9 @@ footer a:hover {
 /*------------------------------------------------------------------------
 ---------------------------Корпоративным клиентам-------------------------
 ------------------------------------------------------------------------*/
+header .menu li a.activeMenu {
+    color: #ff7100;
+}
 
 .breadcrumbs {
     font-size: 12px;
@@ -1068,7 +1081,7 @@ footer a:hover {
     line-height: 12px;
     color: #999999;
     padding-bottom: 22px;
-    padding-top: 16px;
+    padding-top: 10px;
     border-top: 1px solid #e4e4e4;
 }
 
@@ -1087,7 +1100,7 @@ footer a:hover {
 }
 
 .clientWrap {
-    padding-bottom: 55px;
+    padding-bottom: 57px;
 }
 
 .clientWrap .left {
@@ -1100,7 +1113,8 @@ footer a:hover {
     font-weight: normal;
     line-height: 22px;
     color: #333333;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+    width: 300px;
 }
 
 /*---------------Форма---------------*/
@@ -1339,10 +1353,10 @@ footer a:hover {
 
 /*----------Конец формы-------------*/
 .clientWrap .right {
-    width: calc(100% - 310px);
+    width: calc(100% - 315px);
     float: left;
-    padding-left: 35px;
-    padding-bottom: 20px;
+    padding-left: 39px;
+    padding-bottom: 21px;
 }
 
 /*Косяк с open sans*/
@@ -1899,20 +1913,30 @@ h3News {
         float: none;
         margin: 0 auto;
     }
+
     .clientWrap .addLogo .rightLogo {
         width: 40%;
         float: right;
     }
+
     .clientWrap .left input {
         width: 100%;
     }
+
     .clientWrap .addInf textarea {
         width: 100%;
     }
+
     .clientWrap .right {
         width: 100%;
         float: none;
         padding-left: 0px;
     }
+
+    .call,
+    .up {
+        display: none;
+    }
+
 
 }
